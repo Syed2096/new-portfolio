@@ -108,7 +108,7 @@ const Tech = () => {
   );
 
   return (
-    <div className='mt-150 pb-50'>
+    <div className='mt-150 pb-20'>
       <h2 className='my-10 text-center text-4xl'>My Technologies</h2>
       <TechSection title="Languages" items={technologies.languages} />
       <TechSection title="Front-End" items={technologies.frontend} />

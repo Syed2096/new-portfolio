@@ -4,7 +4,7 @@ import me from '../assets/Ahmed.jpg';
 
 const About = () => {
   return (
-    <div className="h-screen flex items-center"> {/* Added h-screen and flex items-center */}
+    <div className="my-10 h-screen flex items-center"> {/* Added h-screen and flex items-center */}
       <div className="flex flex-wrap justify-center lg:justify-start items-center w-full"> {/* Added items-center */}
         {/* Left content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
@@ -28,7 +28,7 @@ const About = () => {
         {/* Right image */}
         <div className="w-full py-4 lg:w-1/2 lg:p-8">
           <div className="flex justify-center">
-            <img src={me} alt="Ahmed Syed" />
+            <img src={me} alt="Ahmed Syed" className='rounded-4xl' />
           </div>
         </div>
       </div>

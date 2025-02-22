@@ -1,41 +1,40 @@
-// import project1 from "../assets/projects/project-1.jpg";
-// import project2 from "../assets/projects/project-2.jpg";
-// import project3 from "../assets/projects/project-3.jpg";
-// import project4 from "../assets/projects/project-4.jpg";
-
 export const ABOUT_ME = `I have been coding since I was in high school and have a bachelors in computer science, I develop software solutions for myself and sometimes others where 
 I see a good use case. I've developed various applications, from AI bots and game development to full production grade applications. I also have a year of work experience. I am a detail 
 orientied and reliable developer who can adapt quickly to generate results. Besides coding, I like to workout to stay active and play video games. Some of my favourite games being 
 Counter Strike 2, Red Dead Redemption 2 and Cyberpunk 2077.`;
 
+export const EDUCATION = {
+	year: '2018 - 2023',
+	degree: 'Bachelor\'s of Computer Science',
+	university: 'University of Guelph',
+	description: `Completed a Bachelor\'s in Computer Science at the University of Guelph, gaining hands-on experience through multiple co-op terms in full-stack development, big data, 
+	and systems development. Awarded entrance and second-year scholarships for academic excellence.`
+}
+
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "May 2022 - Aug 2022",
+    role: "Software Developer",
+    company: "Blackberry",
+    description: `Worked on cryptographic libraries (PKI-C, SSL-C, Crypto-C) at BlackBerry's Certicom team, optimizing security protocols across multiple OS using Jenkins. 
+		Assisted in debugging, testing, and performance optimization while contributing to code reviews and technical documentation.`,
+    technologies: ["Subversion", "C", "Jenkins", "Linux"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    year: "Jan 2022 - Apr 2022",
+    role: "Big Data Software Developer",
+    company: "Sunlife Financial",
+    description: `Automated data processing to enhance analytics efficiency, optimized CI/CD pipelines for smoother deployments, and collaborated on documentation and 
+		reporting. Gained hands-on experience with big data technologies and analytics.`,
+    technologies: ["Python", "Ansible", "Jira", "Git"],
   },
   {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "May 2021 - Aug 2021",
+    role: "Full Stack Software Engineer",
+    company: "Andie",
+    description: `Developed frontend components with React.js and backend functionality with Django, ensuring a seamless user experience through debugging and testing. 
+		Contributed to UI/UX improvements via code reviews and design discussions while creating technical documentation for onboarding and support.`,
+    technologies: ["Python", "React", "Django", "Flask"],
   },
 ];
 
@@ -69,9 +68,3 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
   },
 ];
-
-export const CONTACT = {
-  address: "Toronto, Ontario",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
-};
