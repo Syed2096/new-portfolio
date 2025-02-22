@@ -1,6 +1,11 @@
 // Navbar.jsx
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import { FaGraduationCap } from "react-icons/fa";
+import { GiSuitcase } from "react-icons/gi";
+import { FaFolder } from "react-icons/fa";
+import { RiToolsFill } from "react-icons/ri";
 
 const Navbar = () => {
   const handleClick = (e, id) => {
@@ -30,12 +35,42 @@ const Navbar = () => {
         </div>
 
         {/* Mobile view - show numbers (for screens smaller than 1024px) */}
-        <div className="flex md:hidden space-x-4">
-          <a href="#about-me" onClick={(e) => handleClick(e, 'about-me')} className="text-white hover:text-cyan-300">1</a>
-          <a href="#education" onClick={(e) => handleClick(e, 'education')} className="text-white hover:text-cyan-300">2</a>
-          <a href="#work-experience" onClick={(e) => handleClick(e, 'work-experience')} className="text-white hover:text-cyan-300">3</a>
-          <a href="#projects" onClick={(e) => handleClick(e, 'projects')} className="text-white hover:text-cyan-300">4</a>
-          <a href="#tech" onClick={(e) => handleClick(e, 'tech')} className="text-white hover:text-cyan-300">5</a>
+        <div className="flex md:hidden space-x-1">
+			<a 
+				href="#about-me" 
+				onClick={(e) => handleClick(e, 'about-me')} 
+				className="flex items-center justify-center w-10 h-10 text-white hover:text-cyan-300"
+			>
+				<CgProfile className="w-7 h-7" />
+			</a>
+			<a 
+				href="#education" 
+				onClick={(e) => handleClick(e, 'education')} 
+				className="flex items-center justify-center w-10 h-10 text-white hover:text-cyan-300"
+			>
+				<FaGraduationCap className="w-7 h-7" />
+			</a>
+			<a 
+				href="#work-experience" 
+				onClick={(e) => handleClick(e, 'work-experience')} 
+				className="flex items-center justify-center w-10 h-10 text-white hover:text-cyan-300"
+			>
+				<GiSuitcase className="w-7 h-7" />
+			</a>
+			<a 
+				href="#projects" 
+				onClick={(e) => handleClick(e, 'projects')} 
+				className="flex items-center justify-center w-10 h-10 text-white hover:text-cyan-300"
+			>
+				<FaFolder className="w-7 h-7" />
+			</a>
+			<a 
+				href="#tech" 
+				onClick={(e) => handleClick(e, 'tech')} 
+				className="flex items-center justify-center w-10 h-10 text-white hover:text-cyan-300"
+			>
+				<RiToolsFill className="w-7 h-7" />
+			</a>
         </div>
       </div>
 

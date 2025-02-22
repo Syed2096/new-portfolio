@@ -4,9 +4,9 @@
 // import project4 from "../assets/projects/project-4.jpg";
 
 export const ABOUT_ME = `I have been coding since I was in high school and have a bachelors in computer science, I develop software solutions for myself and sometimes others where 
-I see a good use case. I've developed various applications, from AI bots and game development to full production grade applications. I am a detail orientied and reliable developer who 
-can adapt quickly to generate results. Besides coding, I like to workout to stay active and play video games. Some of my favourite games being Counter Strike 2, Red Dead Redemption 2
-and Cyberpunk 2077.`;
+I see a good use case. I've developed various applications, from AI bots and game development to full production grade applications. I also have a year of work experience. I am a detail 
+orientied and reliable developer who can adapt quickly to generate results. Besides coding, I like to workout to stay active and play video games. Some of my favourite games being 
+Counter Strike 2, Red Dead Redemption 2 and Cyberpunk 2077.`;
 
 export const EXPERIENCES = [
   {

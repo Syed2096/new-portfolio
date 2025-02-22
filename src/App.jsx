@@ -21,7 +21,7 @@ function App() {
       </div>
       
       {/* Main Content with padding-top to account for fixed navbar */}
-      <div className="container mx-auto px-8 pt-24">
+      <div className="container mx-auto px-20">
         <section id="about-me" className="scroll-mt-24">
           <About />
         </section>
