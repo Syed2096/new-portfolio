@@ -34,9 +34,9 @@ import vscode from '../assets/VSCode.png';
 import { motion } from 'framer-motion';
 
 const iconVariants = (duration) => ({
-  initial: { y: -10 },
+  initial: { y: -5 },
   animate: {
-    y: [10, -10],
+    y: [5, -5],  // Reduced animation range
     transition: {
       duration: duration,
       ease: 'linear',
@@ -50,24 +50,28 @@ const TechItem = ({ name, icon }) => {
   const randomDuration = Math.random() * (6 - 2.5) + 2.5;
 
   return (
-    <motion.div
-      variants={iconVariants(randomDuration)}
-      initial="initial"
-      animate="animate"
-      className="rounded-xl sm:rounded-2xl border-2 sm:border-4 border-neutra-800 p-2 sm:p-5 flex flex-col items-center relative"
-    >
-      <div className="absolute inset-0 bg-white opacity-10 rounded-xl sm:rounded-2xl blur-lg" />
-      <div className="relative z-10">
-        <div className="w-12 h-12 sm:w-20 sm:h-20 flex items-center justify-center">
-          <img
-            src={icon}
-            alt={name.toLowerCase()}
-            className="w-[48px] h-[48px] sm:w-[80px] sm:h-[80px] object-contain"
-          />
+    <div className="w-24 sm:w-32"> {/* Fixed width container */}
+      <motion.div
+        variants={iconVariants(randomDuration)}
+        initial="initial"
+        animate="animate"
+        className="rounded-xl sm:rounded-2xl border-2 sm:border-4 border-neutra-800 p-2 sm:p-4 flex flex-col items-center relative h-24 sm:h-32" // Fixed height
+      >
+        <div className="absolute inset-0 bg-white opacity-10 rounded-xl sm:rounded-2xl blur-lg" />
+        <div className="relative z-10 flex flex-col items-center justify-between h-full">
+          <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+            <img
+              src={icon}
+              alt={name.toLowerCase()}
+              className="w-[40px] h-[40px] sm:w-[56px] sm:h-[56px] object-contain"
+            />
+          </div>
+          <h1 className="text-[10px] sm:text-sm text-center overflow-hidden text-ellipsis w-full px-1">
+            {name}
+          </h1>
         </div>
-        <h1 className="mt-1 sm:mt-2 text-center text-xs sm:text-base">{name}</h1>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 
@@ -88,7 +92,7 @@ const TechSection = ({ title, items, index }) => {
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: xValue }}
         transition={{ duration: 1 }}
-        className="flex flex-wrap items-center justify-center gap-3 sm:gap-6"
+        className="flex flex-wrap items-center justify-center gap-4 sm:gap-6"
       >
         {items.map((tech, index) => (
           <TechItem key={tech.name} {...tech} />
