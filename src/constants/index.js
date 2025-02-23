@@ -39,32 +39,33 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
-  {
-    title: "E-Commerce Website",
-    // image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Task Management App",
-    // image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-  },
-  {
-    title: "Portfolio Website",
-    // image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    // image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  },
+	{
+	  title: "Collective Intelligence",
+	  // image: project1,
+	  description:
+		"A social media platform featuring a RAG chatbot, built with the MERN stack. Incorporates AI-driven insights, a dynamic knowledge graph, Google Cloud integration for scalable storage, and JWT-based authentication for security.",
+	  technologies: ["MERN", "Stripe", "Generative AI"],
+	},
+	{
+	  title: "GPT-Analyzer",
+	  // image: project2,
+	  description:
+		"A Python-based bot that evaluates a company’s fundamentals, technical indicators, and sentiment analysis to identify potential investment opportunities.",
+	  technologies: ["Python", "Selenium", "Generative AI"],
+	},
+	{
+	  title: "AI Trading Bot",
+	  // image: project3,
+	  description:
+		"An AI-powered trading bot designed for Coinbase, Binance, and Interactive Brokers. Utilizes TensorFlow for price prediction and automates trading decisions, with real-time trade alerts and interactions via Discord.",
+	  technologies: ["Python", "API", "TensorFlow", "Discord.py"],
+	},
+	{
+	  title: "Unity 3D Checkers",
+	  // image: project4,
+	  description:
+		"Led a team in developing an interactive 3D checkers game in Unity using C#. Designed and implemented game logic, UI, and responsive gameplay mechanics. Took initiative to learn Unity and mentor team members throughout development.",
+	  technologies: ["Unity", "C#"],
+	},
 ];
+
