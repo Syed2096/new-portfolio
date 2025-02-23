@@ -33,7 +33,6 @@ import tensorflow from '../assets/TensorFlow.png';
 import vscode from '../assets/VSCode.png';
 import { motion } from 'framer-motion';
 
-// Icon animation variants with random duration
 const iconVariants = (duration) => ({
   initial: { y: -10 },
   animate: {
@@ -47,50 +46,49 @@ const iconVariants = (duration) => ({
   },
 });
 
-// TechItem Component with random duration for each icon animation
 const TechItem = ({ name, icon }) => {
-  const randomDuration = Math.random() * (6 - 2.5) + 2.5; // Random duration between 2.5 and 6
+  const randomDuration = Math.random() * (6 - 2.5) + 2.5;
 
   return (
     <motion.div
       variants={iconVariants(randomDuration)}
       initial="initial"
       animate="animate"
-      className="rounded-2xl border-4 border-neutra-800 p-5 flex flex-col items-center relative"
+      className="rounded-xl sm:rounded-2xl border-2 sm:border-4 border-neutra-800 p-2 sm:p-5 flex flex-col items-center relative"
     >
-      {/* Blurred background for the entire card */}
-      <div className="absolute inset-0 bg-white opacity-10 rounded-2xl blur-lg" />
-      {/* Content container with relative positioning to stay above blur */}
+      <div className="absolute inset-0 bg-white opacity-10 rounded-xl sm:rounded-2xl blur-lg" />
       <div className="relative z-10">
-        <div className="w-20 h-20 flex items-center justify-center">
+        <div className="w-12 h-12 sm:w-20 sm:h-20 flex items-center justify-center">
           <img
             src={icon}
             alt={name.toLowerCase()}
-            className="w-[80px] h-[80px] object-contain"
+            className="w-[48px] h-[48px] sm:w-[80px] sm:h-[80px] object-contain"
           />
         </div>
-        <h1 className="mt-2 text-center">{name}</h1>
+        <h1 className="mt-1 sm:mt-2 text-center text-xs sm:text-base">{name}</h1>
       </div>
     </motion.div>
   );
 };
 
-// TechSection Component with alternate x values
 const TechSection = ({ title, items, index }) => {
-  // Alternate x values for each section
   const xValue = index % 2 === 0 ? -100 : 100;
 
   return (
     <>
-      <motion.h3  whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: xValue }} // Alternate x for section
+      <motion.h3 
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: xValue }}
         transition={{ duration: 1 }} 
-		className="my-10 text-center text-2xl">{title}</motion.h3>
+        className="my-6 sm:my-10 text-center text-xl sm:text-2xl"
+      >
+        {title}
+      </motion.h3>
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: xValue }} // Alternate x for section
+        initial={{ opacity: 0, x: xValue }}
         transition={{ duration: 1 }}
-        className="flex flex-wrap items-center justify-center gap-6"
+        className="flex flex-wrap items-center justify-center gap-3 sm:gap-6"
       >
         {items.map((tech, index) => (
           <TechItem key={tech.name} {...tech} />
@@ -100,7 +98,6 @@ const TechSection = ({ title, items, index }) => {
   );
 };
 
-// Main Tech Component
 const Tech = () => {
   const technologies = {
     languages: [
@@ -151,8 +148,15 @@ const Tech = () => {
   };
 
   return (
-    <div className="mt-30 pb-20">
-      <motion.h2 whileInView={{opacity: 1, y: 0}} initial={{opacity: 0, y: -100}} transition={{duration: 0.5}} className="my-10 text-center text-4xl">My Technologies</motion.h2>
+    <div className="mt-20 sm:mt-30 pb-10 sm:pb-20">
+      <motion.h2 
+        whileInView={{opacity: 1, y: 0}} 
+        initial={{opacity: 0, y: -100}} 
+        transition={{duration: 0.5}} 
+        className="my-6 sm:my-10 text-center text-3xl sm:text-4xl"
+      >
+        My Technologies
+      </motion.h2>
       <TechSection title="Database" items={technologies.database} index={0} />
       <TechSection title="Front-End" items={technologies.frontend} index={1} />
       <TechSection title="Back-End" items={technologies.backend} index={2} />
