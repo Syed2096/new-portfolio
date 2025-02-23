@@ -44,14 +44,14 @@ export const PROJECTS = [
 	  // image: project1,
 	  description:
 		"A social media platform featuring a RAG chatbot, built with the MERN stack. Incorporates AI-driven insights, a dynamic knowledge graph, Google Cloud integration for scalable storage, and JWT-based authentication for security.",
-	  technologies: ["MERN", "Stripe", "Generative AI"],
+	  technologies: ["MERN", "Stripe", "Gen AI"],
 	},
 	{
 	  title: "GPT-Analyzer",
 	  // image: project2,
 	  description:
 		"A Python-based bot that evaluates a company’s fundamentals, technical indicators, and sentiment analysis to identify potential investment opportunities.",
-	  technologies: ["Python", "Selenium", "Generative AI"],
+	  technologies: ["Python", "Selenium", "Gen AI"],
 	},
 	{
 	  title: "AI Trading Bot",
